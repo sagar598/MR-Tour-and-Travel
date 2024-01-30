@@ -65,4 +65,64 @@ function initializeNavbar() {
   document.addEventListener("DOMContentLoaded", function () {
     fetchAndInsert('/footer.html', 'footer-placeholder');
   });
+
+  
+
+
+
+
+
+// Car Slider 
+
+document.addEventListener('DOMContentLoaded', function () {
+    const sliderContainer = document.getElementById('sliderContainer');
+    const slides = sliderContainer.querySelectorAll('.slide');
+    const slideWidth = slides[0].offsetWidth;
+    const slidesToShow = 3;
+    let currentIndex = 0;
+  
+    // Duplicate slides for continuous loop
+    for (let i = 0; i < slidesToShow; i++) {
+        const clone = slides[i].cloneNode(true);
+        sliderContainer.appendChild(clone);
+    }
+  
+    function updateSlider() {
+        sliderContainer.style.transition = 'transform 0.5s ease-in-out';
+        sliderContainer.style.transform = 'translateX(' + (-currentIndex * slideWidth) + 'px)';
+    }
+  
+    function nextSlide() {
+        currentIndex++;
+        updateSlider();
+    }
+  
+    function prevSlide() {
+        currentIndex--;
+        updateSlider();
+    }
+  
+    function handleTransitionEnd() {
+        if (currentIndex >= slides.length) {
+            currentIndex = 0;
+            sliderContainer.style.transition = 'none';
+            sliderContainer.style.transform = 'translateX(' + (-currentIndex * slideWidth) + 'px)';
+        } else if (currentIndex < 0) {
+            currentIndex = slides.length - 1;
+            sliderContainer.style.transition = 'none';
+            sliderContainer.style.transform = 'translateX(' + (-currentIndex * slideWidth) + 'px)';
+        }
+    }
+  
+    sliderContainer.addEventListener('transitionend', handleTransitionEnd);
+  
+    function initSlider() {
+        setInterval(nextSlide, 3000); // Auto-advance slides every 3 seconds
+    }
+  
+    document.getElementById('prevBtn').addEventListener('click', prevSlide);
+    document.getElementById('nextBtn').addEventListener('click', nextSlide);
+  
+    initSlider();
+  });
   
