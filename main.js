@@ -126,3 +126,16 @@ document.addEventListener('DOMContentLoaded', function () {
     initSlider();
   });
   
+
+
+
+
+
+
+
+
+// Preloader 
+document.addEventListener('DOMContentLoaded', function () {
+    // Hide the spinner after the page content has loaded
+    document.querySelector('.spinner-container').style.display = 'none';
+});
