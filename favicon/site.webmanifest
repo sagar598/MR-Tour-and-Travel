@@ -1,0 +1,14 @@
+{
+    "name": "MR Tour and Travel",
+    "short_name": "MR Groups",
+    "icons": [
+       {
+          "src": "/android-chrome-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+       }
+    ],
+    "theme_color": "#1ECB15",
+    "background_color": "#FFFFFF",
+    "display": "standalone"
+ }
