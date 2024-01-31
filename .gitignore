@@ -1,0 +1,5 @@
+# Node
+node_modules/
+
+# Output directories (generated during development/build)
+dist/

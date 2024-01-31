@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* For Text Scroller at Hero Section  */
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  
+
+
+  
+  .animation-scroll {
+    animation-name: scroll;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+
+
+  .parallax-section {
+    height: 500px; /* Adjust the height as needed */
+  }
+
+  
+ 
+
+  
