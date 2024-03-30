@@ -135,7 +135,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // Preloader 
+
 document.addEventListener('DOMContentLoaded', function () {
-    // Hide the spinner after the page content has loaded
-    document.querySelector('.spinner-container').style.display = 'none';
+    // Show the spinner
+    document.querySelector('.spinner-container').style.display = 'block';
+
+    // Hide the spinner after 2 seconds
+    setTimeout(function() {
+        document.querySelector('.spinner-container').style.display = 'none';
+    }, 1000); // 1000 milliseconds = 2 seconds
 });
