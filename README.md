@@ -1,3 +1,3 @@
-# MR Tours & Travel
+# Indore Cab Now
 
-Repository for the official website of MR Tours & Travel.in, a car rental service in Madhya Pradesh, India.
+Repository for the official website of Indore Cab Now, a car rental service in Madhya Pradesh, India.
