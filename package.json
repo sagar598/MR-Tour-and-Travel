@@ -1,7 +1,7 @@
 {
-  "name": "mr-tour-and-travel",
+  "name": "indore-cab-now",
   "version": "1.0.0",
-  "description": "",
+  "description": "Website for Indore Cab service",
   "main": "main.js",
   "scripts": {
     "start": "vite",
